@@ -134,7 +134,7 @@ fun CountryItem(country: Country) {
     }
 }
 
-
+//funcion para el preview
 @Composable
 fun CountryList(countries: List<Country>) {
     Box(
@@ -151,4 +151,18 @@ fun CountryList(countries: List<Country>) {
             }
         }
     }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun Previewderequisito() {
+    val countries = getSampleCountries() // Obtén la lista de países
+    CountryList(countries = countries) // Muestra la lista de países
+
+}
+
+fun getSampleCountries(): List<Country> {
+    return listOf(
+        Country(name = "Mexico", capital = "CdMx", image = "https://flagcdn.com/w320/mx.png")
+    )
 }
